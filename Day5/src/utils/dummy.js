@@ -1,53 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-//HEADER
-function Header(){
-    return(
-      <div className="header">
-      <img className="logo" src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT76bojCz7_injEv5kj9N2pSwEOo1BCQmau0w&s" height="80px" width="80px"/>
-      <div className="option">
-        <button className="btn">MEN</button>
-        <button className="btn">WOMEN</button>
-        <button className="btn"> KIDS</button>
-        <button className="btn">HOME & LIVING</button>
-        <button className="btn">BEAUTY</button>
-         </div>
-
-         <input className="search" placeholder="Search for products, brands and more"></input>
-
-
-         <div className="profile">
-            <button className="pro">Profile</button>
-            <button className="pro">Wishlist</button>
-            <button className="pro">Bag</button>
-         </div>
-      </div>
-    )
-}
-
-//BODY
-  function Card(props){
-    return(
-        <div className="card" style={{border:"2px solid black",padding:"2px"}}>
-            <img src={props.img} height="200px" width="200px" alt="img" />
-
-           <div style={{textAlign:"center"}}>
-            <h2>{props.cloth}</h2>
-            <h1>{props.offer}</h1>
-            <h2>Shop Now</h2>
-           </div>
-
-        </div>
-    )
-}
-
-//FOOTER
-function Footer(){
-    return(
-        <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2025/JANUARY/18/CH3OJp88_77193d7b8a4c4a2289a48f5bbda182de.jpg" width="1500px"/>
-    )
-}
-
 const cardData = [
     {cloth:"shirt", offer:"30-40% OFF",img:"https://www.creaturesofhabit.in/cdn/shop/files/FUJIFILM_X-T3096.jpg?v=1698163521"},
     {cloth:"dress", offer:"40-50% OFF",img:"https://www.azafashions.com/blog/wp-content/uploads/2024/11/Featured-image-4.jpg"},
@@ -60,27 +10,10 @@ const cardData = [
     {cloth:"shorts", offer:"15-25% OFF",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREVu-2g2z_NGdqmabVvDZZibVrQpkZBSsh_w&s"},
     {cloth:"blouse", offer:"25-35% OFF",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY1XCu825jkbxp8Jvale6tELlujcID6cAv6Q&s"}
 ]
-  function App(){
-    return(
-        <>
-        {/* HEADER*/}
-        <Header/>
-
-
-        {/*BODY*/}
-        <div className="mid" style={{display:"flex",gap:"10px",flexWrap:"wrap"}}>
-             {/* <Card  cloth="shirt" offer="30-40% OFF" />*/
-            }
-
-            {
-                cardData.map((val,idx)=> <Card key={idx} cloth={val.cloth} offer={val.offer} img={val.img}/>)
-            }
-            </div>
-
-        {/*FOOTER*/}
-        <Footer/>
-            </>
-    )
-  }
-  const root = ReactDOM.createRoot(document.getElementById("root"));
-  root.render(<App />)
+export function greet(){
+    return "Hello World";
+}
+export function meet(){
+    return "Welcome to Dummy Data";
+}
+export default cardData;
