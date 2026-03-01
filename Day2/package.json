@@ -1,0 +1,25 @@
+{
+  "name": "reactbasic",
+  "version": "1.0.0",
+  "description": "\"learning\"",
+  "homepage": "https://github.com/ayushimaheshwari9494-eng/REACT#readme",
+  "bugs": {
+    "url": "https://github.com/ayushimaheshwari9494-eng/REACT/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushimaheshwari9494-eng/REACT.git"
+  },
+  "license": "ISC",
+  "author": "Ayushi",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "parcel": "^2.16.4",
+    "react": "^19.2.4",
+    "reactdom": "^2.0.0"
+  }
+}
