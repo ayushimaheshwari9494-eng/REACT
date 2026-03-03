@@ -45,3 +45,9 @@ body{
     background-color: rgb(50, 112, 50);
     color: white;
 }
+button{
+    height: 50px;
+    background-color: pink;
+    color: white;
+    
+}
