@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./components/Header";
-import FoodOption from "./components/FoodOption";
-import GroceryOption from "./components/GroceryOption";
-import DineOption from "./components/DineOption";
-function App() {
+import Home from "./components/Home";
+import Restaurant from "./components/Restaurant";
+import { BrowserRouter, Routes, Route } from "react-router";
+import RestaurantMenu from "./components/RestaurantMenu";
+
+
+
+// Header section: Let's build it
+
+function App(){
+    
     return(
-      <>
+       <>
+       <BrowserRouter>
+       <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/restaurant" element={<Restaurant></Restaurant>}></Route>
+        <Route path="/city/delhi/:id" element={<RestaurantMenu></RestaurantMenu>}></Route>
+       </Routes>
+       </BrowserRouter>
       
-      <Header></Header>
-      <FoodOption></FoodOption>
-      <GroceryOption></GroceryOption>
-      <DineOption></DineOption>
-      </>
+       </>
     )
 }
-ReactDOM.createRoot(document.getElementById("root")).render(<App></App>)
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App></App>);
+
+
+
+// Proxy server "https://cors-anywhere.herokuapp.com/"; 
+
